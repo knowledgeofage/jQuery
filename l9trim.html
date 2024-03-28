@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>trim method</title>
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+    <script src="./libs/jquery-3.7.1.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            let greeting = "Welcome to jQuery lesson";
+            console.log(greeting); // 
+
+            let something = "    Welcome to jQuery lesson       ";
+            console.log(something); //     Welcome to jQuery lesson   
+
+            something = $.trim(something);
+            console.log(something); //Welcome to jQuery lesson   
+
+            let welcome = "\n\n    Welcome to jQuery lesson    \n\n";
+            console.log(welcome); //     Welcome to jQuery lesson 
+
+            welcome = jQuery.trim(welcome);
+            console.log(welcome); // Welcome to jQuery lesson
+
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>
