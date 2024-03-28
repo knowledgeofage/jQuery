@@ -39,11 +39,11 @@
         }
         
         .square4 {
-            background-color: red;
+            background-color: violet;
         }
         
         .square5 {
-            background-color: violet;
+            background-color: red;
         }
     </style>
 </head>
@@ -51,20 +51,20 @@
 <body>
 
     <div>
-        <h1>praent & children Method</h1>
+        <h1>parent & children Method</h1>
         <p>This is awesome jQuery version 3.7.1</p>
     </div>
 
     <div class="container">
-        <div class="box1 square1">Box 1</div>
+        <div class="box square1">Box 1</div>
         <hr/>
-        <div class="box2 square2">Box 2</div>
+        <div class="box square2">Box 2</div>
         <hr/>
-        <div class="box3 square3">Box 3</div>
+        <div class="box square3">Box 3</div>
         <hr/>
-        <div class="box4 square4">Box 4</div>
+        <div class="box square4">Box 4</div>
         <hr/>
-        <div class="box5 square5">Box 5</div>
+        <div class="box square5">Box 5</div>
     </div>
 
     <div>
@@ -78,7 +78,55 @@
     <script type="text/javascript">
         $(document).ready(function() {
 
+            //=> parent
+            // $('.box').click(function() {
+            //     $(this).parent().css({
+            //         "background-color": "darkblue",
+            //         "box-shadow": "5px 5px 10px rgba(0,0,0,0.5)"
+            //     });
+            // });
 
+            //=> children
+            // $('.container').click(function(){
+            //     $(this).children().css("background-color","blue");
+            // });
+
+            // $('.container').click(function(){
+            //     $(this).children('.square1').css("background-color","blue");
+            // });
+
+            // $('.container').click(function() {
+            //     $(this).children('.square3,.square5').css("background-color", "blue");
+            // });
+
+
+            //=> siblings()
+
+            //  $('.square1').click(function() {
+            //     $(this).siblings().css("background-color", "black");
+            // });
+
+            // $('.square1').click(function() {
+            //     $(this).siblings('.square3').css("background-color", "black");
+            // });
+
+            // $('.square1').click(function() {
+            //     $(this).siblings('.square4,.square5').css("background-color", "black");
+            // });
+
+            //=> even / odd / n
+
+            // $('.square1').click(function() {
+            //     $('.box:nth-of-type(even)').css("background-color", "black");
+            // });
+
+            // $('.square1').click(function() {
+            //     $('.box:nth-of-type(odd)').css("background-color", "black");
+            // });
+
+            $('.square1').click(function() {
+                $('.box:nth-of-type(5)').css("background-color", "black");
+            });
 
         });
     </script>
