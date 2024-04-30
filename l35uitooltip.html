@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UI Tooltip</title>
+    <link href="./libs/jquery-ui-1.13.2.custom/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            width: 900px;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <h3>How to use jQuery Tooltip!</h3>
+
+        <p><a href="#" id="ttone" title="This is Tooltip of jQuery UI !">It is used </a>for lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+
+        <form action="" method="">
+            <div class="form-group">
+                <label>Your Age</label>
+                <input type="number" name="age" id="age" class="form-control" autocomplete="off" title="Your age " />
+            </div>
+        </form>
+
+    </div>
+
+
+
+    <script src="./libs/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="./libs/jquery-ui-1.13.2.custom/jquery-ui.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            // $(document).tooltip();
+
+            // $("#ttone").tooltip();
+
+            $("#ttone").tooltip({
+                // show:3000,
+                // hide:5000
+
+                // show:"bounce",
+                // hide:"explode"
+
+                // show:{
+                //     effect:"shake",
+                //     duration:2000
+                // },
+                // hide:{
+                //     effect:"explode",
+                //     duration:2000
+                // },
+
+                // content:"This is jQuery UI. Thanks for using our libs.",
+
+                content: function() {
+                    // return "<img src='./img/logo1.png' width='50px' />";
+
+                    return "<img src='./img/logo1.png' width='50px' /><h5>This is our company log</h5><small>lorem Ipsum is simply dummy text of the printing and typesetting industry</small>";
+                }
+
+            })
+
+            $("#age").tooltip();
+
+
+        });
+    </script>
+</body>
+
+</html>

@@ -73,7 +73,41 @@
     <script type="text/javascript">
         $(document).ready(function() {
 
+            // => closest()
 
+            $("#cls-btn").click(function() {
+
+                $('h1').closest('div').css({
+                    "color": "blue",
+                    "font-size": "30px",
+                    "border": "3px dashed red"
+                });
+            });
+
+
+            // => parentsUntil()
+
+            $("#parunt-btn").click(function() {
+
+                // $('h1').parentsUntil('ul').css({
+                //      "color": "blue",
+                //     "font-size": "30px",
+                //     "border": "3px dashed red"
+                // });
+
+                //  $('h1').parentsUntil('div').css({
+                //      "color": "blue",
+                //     "font-size": "30px",
+                //     "border": "3px dashed red"
+                // });
+
+
+                $('h1').parentsUntil('.container').css({
+                    "color": "blue",
+                    "font-size": "30px",
+                    "border": "3px dashed red"
+                });
+            });
 
 
         });
